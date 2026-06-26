@@ -1,92 +1,22 @@
-import java.io.*;
-import java.util.Scanner;
+COMPANY NAME: CODTECH IT SOLUTION
 
-public class FileHandlingUtility {
+NAME:SINDHU CN
 
-    // Method to write content to a file (overwrite existing content)
-    public static void writeToFile(String filename, String content) {
-        try {
-            FileWriter writer = new FileWriter(filename); // Overwrites file
-            writer.write(content);
-            writer.close();
-            System.out.println(" File written successfully.");
-        } catch (IOException e) {
-            System.out.println(" Error writing to file: " + e.getMessage());
-        }
-    }
+INTERN ID:CT04DG1118
 
-    // Method to read content from a file
-    public static void readFromFile(String filename) {
-        try {
-            File file = new File(filename);
-            Scanner reader = new Scanner(file);
-            System.out.println("\n File Contents:"); 
-            while (reader.hasNextLine()) {
-                System.out.println(reader.nextLine());
-            }
-            reader.close();
-        } catch (FileNotFoundException e) {
-            System.out.println(" File not found: " + e.getMessage());
-        }
-    }
+DOMAIN:JAVA PROGRAMMING
 
-    // Method to append content to an existing file
-    public static void modifyFile(String filename, String newContent) {
-        try {
-            FileWriter writer = new FileWriter(filename, true); // Append mode
-            writer.write("\n" + newContent);
-            writer.close();
-            System.out.println(" Content appended to file.");
-        } catch (IOException e) {
-            System.out.println(" Error modifying file: " + e.getMessage());
-        }
-    }
+BATCH DURATION:4 WEEKS
 
-    // Main method with user menu
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String filename = "demo.txt"; // Default file name
+MENTOR NAME:NELLA SANTHOSH KUMAR
 
-        while (true) {
-            System.out.println("\n====== FILE HANDLING UTILITY ======");
-            System.out.println("1. Write to File (Overwrite)");
-            System.out.println("2. Read from File");
-            System.out.println("3. Modify File (Append)");
-            System.out.println("4. Exit");
-            System.out.print("Choose an option (1-4): ");
+This Java program demonstrates basic file operations such as writing, reading, and modifying (appending) text files. It is written entirely using core Java, making it simple and platform-independent. The program uses a console-based menu to allow the user to choose between three main operations: write new content to a file (overwrite mode), read existing content from a file, and append new content to an existing file. It operates on a default file named demo.txt and continues running until the user selects the exit option. This structure makes it an excellent example of how file handling is implemented in Java for beginners and intermediate programmers.
 
-            int choice = sc.nextInt();
-            sc.nextLine(); // Consume newline
+The program uses standard Java classes such as FileWriter, File, and Scanner from the java.io and java.util packages. The FileWriter class is used for both writing and appending data to the file. When the user selects the write option, the file is opened in overwrite mode, and any previous content is erased. When the append option is selected, the file is opened in append mode, and the new content is added at the end. The Scanner class is used to read the file line by line and display its contents on the screen. If the file does not exist when a read operation is attempted, the program catches the FileNotFoundException and displays an error message.
 
-            switch (choice) {
-                case 1:
-                    System.out.print("Enter text to write: ");
-                    String writeContent = sc.nextLine();
-                    writeToFile(filename, writeContent);
-                    break;
+The user interface is implemented using a simple while loop and switch statement, making the program interactive and easy to use. After displaying the menu, the program waits for the user to enter a choice. Based on the input, the appropriate method is called to handle that operation. The user is prompted to enter the content for writing or appending, and the program performs the action and confirms success with a message. Proper error handling is done using try-catch blocks to ensure that the program does not crash due to I/O errors or missing files.
 
-                case 2:
-                    readFromFile(filename);
-                    break;
+To run this program, users need the Java Development Kit (JDK) installed on their system. It can be executed in any text editor with terminal access or in an Integrated Development Environment (IDE) like Visual Studio Code, IntelliJ IDEA, or Eclipse. These tools provide features like code suggestions, error detection, and easy debugging. Additionally, the program can be run from the command line using the javac command to compile and java to execute. The file used (demo.txt) is created automatically if it does not exist, or used as-is if it’s already present.
 
-                case 3:
-                    System.out.print("Enter text to append: ");
-                    String appendContent = sc.nextLine();
-                    modifyFile(filename, appendContent);
-                    break;
-
-                case 4:
-                    System.out.println(" Exiting program.");
-                    sc.close();
-                    System.exit(0);
-
-                default:
-                    System.out.println(" Invalid option. Please enter 1–4.");
-            }
-        }
-    }
-}
-
-
-output:
+OUTPUT:
 "C:\Users\sindu\Pictures\Screenshots\Screenshot 2026-06-26 191934.png"

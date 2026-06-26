@@ -19,4 +19,4 @@ The user interface is implemented using a simple while loop and switch statement
 To run this program, users need the Java Development Kit (JDK) installed on their system. It can be executed in any text editor with terminal access or in an Integrated Development Environment (IDE) like Visual Studio Code, IntelliJ IDEA, or Eclipse. These tools provide features like code suggestions, error detection, and easy debugging. Additionally, the program can be run from the command line using the javac command to compile and java to execute. The file used (demo.txt) is created automatically if it does not exist, or used as-is if it’s already present.
 
 OUTPUT:
-"C:\Users\sindu\Pictures\Screenshots\Screenshot 2026-06-26 191934.png"
+<img width="1630" height="415" alt="Image" src="https://github.com/user-attachments/assets/7ec7d11e-04b5-4065-b2af-3165f3722551" />
